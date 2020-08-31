@@ -37,7 +37,7 @@ class _bbb():
         rst = re.findall(r"^[Pp]([8,9])[._](\d+[A,B]?)$", str(pin))
         if not rst:
             raise KeyError('pin name {} not supported!'.format(pin))
-        return self._BBB_GPIO_MAP['P%s_%s' % (res[0][0], res[0][0])]
+        return self._BBB_GPIO_MAP['P%s_%s' % (rst[0][0], rst[0][0])]
 
 
 RISING       = 'rising'
