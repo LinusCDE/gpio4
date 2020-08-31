@@ -215,7 +215,7 @@ class GPIO(object):
     RISING = constants.RISING
     FALLING = constants.FALLING
     BOTH = constants.CHANGE
-    BOARD = constants.BOARD_SUNXI
+    BOARD = constants.BOARD_BBB
     BCM = constants.BCM
     VERSION = 1.0
 
