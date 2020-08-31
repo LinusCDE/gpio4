@@ -43,6 +43,7 @@ class _bbb():
 RISING       = 'rising'
 FALLING      = 'falling'
 CHANGE       = 'change'
+BOTH         = 'both'
 HIGH         = 1
 LOW          = 0
 INPUT        = 'in'

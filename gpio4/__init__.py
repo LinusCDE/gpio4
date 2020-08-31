@@ -214,7 +214,7 @@ class GPIO(object):
     LOW = constants.LOW
     RISING = constants.RISING
     FALLING = constants.FALLING
-    BOTH = constants.CHANGE
+    BOTH = constants.BOTH
     BOARD = constants.BOARD_BBB
     BCM = constants.BCM
     VERSION = 1.0
