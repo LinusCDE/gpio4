@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="gpio4",
-    version="0.0.11",
+    version="0.0.12",
     author="hankso",
     author_email="hankso1106@gmail.com",
     description=("Improved gpio module based on Sysfs, "
