@@ -1,4 +1,9 @@
 # gpio4
+
+This fork uses the BBB names by default.
+
+---
+
 Control gpio in python on Linux.
 
 Improved version based on Sysfs, features same as RPi.GPIO and [gpio3](https://pypi.org/project/gpio3)
