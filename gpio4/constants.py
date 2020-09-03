@@ -33,11 +33,14 @@ class _bbb():
             'P9_41':  20,   'P9_41A': 20,   'P9_41B':116,   'P9_42':   7,   'P9_42A':  7,   'P9_42B':114
         }
     def __getitem__(self, pin):
-        # Accept formats for P8_08 wold be: e.g. p8_08, P8_08, p8.08 or P8.08
+        # Accept formats for P8_08 wold be: e.g. p8_08, P8_08, p8.08, P8.08, p8.8, P8.8, p8_8 or P8_8
         rst = re.findall(r"^[Pp]([8,9])[._](\d+[A,B]?)$", str(pin))
         if not rst:
             raise KeyError('pin name {} not supported!'.format(pin))
-        return self._BBB_GPIO_MAP['P%s_%s' % (rst[0][0], rst[0][1])]
+        header_num, pin_name = rst[0]
+        suffix = pin_name[-1] if pin_name.endswith('A') or pin_name.endswith('B') else ''
+        pin_name = '%.2d%s' % (int(pin_name[:len(pin_name) - len(suffix)]), suffix)
+        return self._BBB_GPIO_MAP['P%s_%s' % (header_num, pin_name)]
 
 
 RISING       = 'rising'
